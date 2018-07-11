@@ -24,11 +24,9 @@ textarea {
 }
 .book {
     background-image: url("https://i.imgur.com/TLnFdQW.png");
-    background-size: auto;
+    background-size: cover;
     height: 260px;
-    color: aqua;
-    justify-content:center;
-
+    color: black;
 }
 .shelf {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsye8e2-cKz9SWqB0mVSOMOP90dCOLvLrdWjFHaxvEYFSjggCgkA ");
@@ -36,6 +34,7 @@ textarea {
     height: 20vh;
 }
 .bkt{
-    align-items:center;
+text-align:center;
+margin-top:100px;
 }
 

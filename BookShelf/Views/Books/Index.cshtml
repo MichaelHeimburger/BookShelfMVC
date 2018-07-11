@@ -1,11 +1,12 @@
 ﻿@model IEnumerable<BookShelf.Models.Book>
+@*<script src="~/Scripts/bookscript.js"></script>*@
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2 onclick="bookstack()">Index</h2>
+@*<script>alert('t')</script>*@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -29,30 +30,31 @@
         </div>
     </div>
 
-@foreach (var item in Model) {
-    <div class="book row">
-        <div class="col bkt">
-            @Html.DisplayFor(modelItem => item.Category.Name)
-        </div >
-        <div class="col bkt">
-            @Html.DisplayFor(modelItem => item.title)
+    @foreach (var item in Model)
+    {
+        <div id="book" class="book row" onload="bookstack()">
+            <div class="col bkt">
+                @Html.DisplayFor(modelItem => item.Category.Name)
+            </div>
+            <div class="col bkt">
+                @Html.DisplayFor(modelItem => item.title)
+            </div>
+            <div class="bkt col">
+                @Html.DisplayFor(modelItem => item.PublishedDate)
+            </div>
+            <div class="bkt col">
+                @Html.DisplayFor(modelItem => item.Description)
+            </div>
+            <div class="bkt col">
+                @Html.DisplayFor(modelItem => item.ISBN)
+            </div>
+            <div class="bkt col">
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </div>
         </div>
-        <div class="bkt col">
-            @Html.DisplayFor(modelItem => item.PublishedDate)
-        </div>
-        <div class="bkt col">
-            @Html.DisplayFor(modelItem => item.Description)
-        </div>
-        <div class="bkt col">
-            @Html.DisplayFor(modelItem => item.ISBN)
-        </div>
-        <div class="bkt col">
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </div>
-    </div>
-}
+    }
 
 </div>
 
