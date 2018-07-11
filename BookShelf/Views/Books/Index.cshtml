@@ -9,49 +9,51 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
+<div class="shelf row"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
             @Html.DisplayNameFor(model => model.Category.Name)
-        </th>
-        <th>
+        </div>
+        <div class="col">
             @Html.DisplayNameFor(model => model.title)
-        </th>
-        <th>
+        </div>
+        <div class="col">
             @Html.DisplayNameFor(model => model.PublishedDate)
-        </th>
-        <th>
+        </div>
+        <div class="col">
             @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
+        </div>
+        <div class="col">
             @Html.DisplayNameFor(model => model.ISBN)
-        </th>
-        <th></th>
-    </tr>
+        </div>
+    </div>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
+    <div class="book row">
+        <div class="col bkt">
             @Html.DisplayFor(modelItem => item.Category.Name)
-        </td>
-        <td>
+        </div >
+        <div class="col bkt">
             @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
+        </div>
+        <div class="bkt col">
             @Html.DisplayFor(modelItem => item.PublishedDate)
-        </td>
-        <td>
+        </div>
+        <div class="bkt col">
             @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
+        </div>
+        <div class="bkt col">
             @Html.DisplayFor(modelItem => item.ISBN)
-        </td>
-        <td>
+        </div>
+        <div class="bkt col">
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
+        </div>
+    </div>
 }
 
-</table>
+</div>
+
+<div class="shelf row"></div>

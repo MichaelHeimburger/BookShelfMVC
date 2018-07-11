@@ -22,3 +22,20 @@ select,
 textarea {
     max-width: 280px;
 }
+.book {
+    background-image: url("https://i.imgur.com/TLnFdQW.png");
+    background-size: auto;
+    height: 260px;
+    color: aqua;
+    justify-content:center;
+
+}
+.shelf {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsye8e2-cKz9SWqB0mVSOMOP90dCOLvLrdWjFHaxvEYFSjggCgkA ");
+    background-size: cover;
+    height: 20vh;
+}
+.bkt{
+    align-items:center;
+}
+
